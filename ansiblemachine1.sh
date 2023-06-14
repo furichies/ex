@@ -3,7 +3,7 @@ apt install -y ansible git
 git clone http://github.com/richifor/examen.git
 cat << EOF > /home/vagrant/hosts
 [container]
-dockermachine ansible_host=192.168.33.101 ansible_ssh_private_key_file=/vagrant/clave
+dockermachine ansible_host=192.168.33.101 ansible_user=vagrant ansible_ssh_private_key_file=/vagrant/clave
 EOF
 cat << EOF > /home/vagrant/.ansible.cfg
 [defaults]

@@ -1,11 +1,11 @@
 apt update
 apt install -y ansible git
-git clone http://github.com/richifor/ventabus.git
-cat << EOF > /etc/ansible/hosts
+git clone http://github.com/richifor/examen.git
+cat << EOF > /home/vagrant/hosts
 [container]
 dockermachine ansible_host=192.168.33.101 ansible_ssh_private_key_file=/vagrant/clave
 EOF
-cat << EOF > /etc/ansible/ansible.cfg
+cat << EOF > /home/vagrant/.ansible.cfg
 [defaults]
 host_key_checking = False
 EOF

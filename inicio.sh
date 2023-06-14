@@ -16,6 +16,8 @@ echo "entendemos que la cosa ha tirado. Renombramos ficheros para aprovisionar"
 sleep 1
 mv ansiblemachine1.sh ansiblemachine1.sh.old
 mv ansiblemachine2.sh ansiblemachine1.sh
+mv dockermachine1.sh dockermachine1.sh.old
+mv dockermachine2.sh dockermachine1.sh
 echo " a ver si tira el último aprovisionamiento"
 sleep 1
 

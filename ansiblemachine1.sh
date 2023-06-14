@@ -59,4 +59,4 @@ echo -e "/vagrant/clave\n\n"|ssh-keygen -t rsa -b 4096
 	echo -e "entendemos que se ha creado un par de claves"
 	sleep 1
 fi
-chown vagrant:vagrant /vagrant/clave*
+chown vagrant:vagrant /vagrant/clave

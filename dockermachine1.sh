@@ -1,4 +1,4 @@
-cat /vagrant/clave.pub >> /home/vagrant/authorized_keys
+cat /vagrant/clave.pub >> /home/vagrant/.ssh/authorized_keys
 cat <<EOF> /vagrant/docker-compose.yaml
 version: '3'
 

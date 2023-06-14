@@ -1,3 +1,4 @@
+#!/bin/bash
 vagrant box add ./img_jam.box ubuntu/jam
 git clone https://github.com/richifor/ex
 cd ex

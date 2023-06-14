@@ -3,7 +3,7 @@ apt install -y ansible git
 git clone http://github.com/richifor/ventabus.git
 cat << EOF > /etc/ansible/hosts
 [container]
-dockermachine ansible_host=192.168.33.101
+dockermachine ansible_host=192.168.33.101 ansible_ssh_private_key_file=/vagrant/clave
 EOF
 cat << EOF > /etc/ansible/ansible.cfg
 [defaults]
@@ -53,4 +53,10 @@ cat << EOF > /vagrant/docker-playbook.yaml
         state: started    
 EOF
 
-
+echo -e "/vagrant/clave\n\n"|ssh-keygen -t rsa -b 4096
+ if [ $? = "0" ]
+ then 
+	echo -e "entendemos que se ha creado un par de claves"
+	sleep 1
+fi
+chown vagrant:vagrant /vagrant/clave*

@@ -1,6 +1,6 @@
 echo 'FROM alpine\nMAINTAINER res@res.es\nCMD [ "/bin/sh" ]' > Dockerfile
 docker build -t alpine2 .
-cat /vagrant/id_rsa.pub >> /home/vagrant/authorized_keys
+cat /vagrant/clave.pub >> /home/vagrant/authorized_keys
 cat <<EOF> docker-compose.yaml
 version: '3'
 
